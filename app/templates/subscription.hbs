@@ -1,0 +1,45 @@
+
+<form id="form1" runat="server">
+    <div class="row">
+        <div class="header-help"></div>
+        <div class="col s12 m2 l4 xl6 triangle-img">
+            <img class="triangle" src="{{rootURL}}assets/images/group_triangle.png"/>
+        </div>
+        <div class="control-sm col s12 m10 l8 xl6">
+            <div class="col s11">
+                <h2 class="white-text">Печатные издания</h2>
+                <p id="dother" class="white-text">
+                  Выберите издание, год и отметьте нужный месяц для просмотра цены подписки
+                </p>
+            </div>
+            <div class="input-field col s11">
+
+                <select id="edition" style="color: white;" onchange="check(); montselse ();">
+                    <option value="none" disabled selected>Выберите издание</option>
+                    {{#each model as |subscription|}}
+                      <option value="{{subscription.value}}" data-id="{{subscription.data_id}}" data-price="{{subscription.price}}" data-month="{{subscription.data_month}}">{{subscription.name}} ({{subscription.price}}руб.)</option>
+                    {{/each}}
+                </select>
+                <label>Выбор печатного издания</label>
+            </div>
+            <div class="input-field col s11">
+                <select id="year" style="color: white;" onchange="check(); montselse ();">
+                    <option value="none" disabled selected>Выберите год</option>
+                    <option value="1">2016</option>
+                    <option value="2">2017</option>
+                    <option value="3">2018</option>
+                    <option value="3">2019</option>
+                </select>
+                <label>Выбор календарного года</label>
+            </div>
+            {{month-list}}
+            <div class="col s12 m10 offset-m1 l8 offset-l2 xl6 offset-xl3" style="margin-top: 60px;">
+                <button id="button" class="btn waves-effect waves-light" type="submit" name="action" disabled>Подписаться
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+            <div class="row"></div>
+
+        </div>
+    </div>
+</form>

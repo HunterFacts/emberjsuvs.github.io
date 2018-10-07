@@ -1,0 +1,31 @@
+{{#each months as |month|}}
+<div class="input-field col s6 m4 l2">
+    <p>
+        <label>
+            <input  {{action 'countInter' on="change"}} type="checkbox" onclick="check(); descheck();"  id="{{month.month}}" class="filled-in mon"/>
+            <span>{{month.name}}</span>
+        </label>
+    </p>
+</div>
+{{/each}}
+<div class="input-field col s12 l4 offset-l8">
+    <div class="switch">
+        <label>
+          <div class="switch-label">Выбрать полугодие</div>
+          <input id="mon6" {{action 'countInter' on="change"}} onclick="mon6s()" type="checkbox" />
+          <span class="lever"></span>
+          Вкл
+        </label>
+    </div>
+</div>
+<div class="input-field col s12 l4 offset-l8">
+    <div class="switch">
+        <label>
+        <div class="switch-label">Выбрать все</div>
+
+          <input id="alls" {{action 'countInter' on="change"}} onclick="alls6()" type="checkbox" />
+          <span class="lever"></span>
+          Вкл
+        </label>
+    </div>
+</div>

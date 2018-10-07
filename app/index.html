@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Papers</title>
     <meta name="description" content="">
@@ -11,15 +11,22 @@
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/papers.css">
-
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/other/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Test</title>
     {{content-for "head-footer"}}
   </head>
   <body>
+    <div class="canvas-background">
+        <canvas id="canvas"></canvas>
+    </div>
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/papers.js"></script>
-
+    <script src="{{rootURL}}assets/other/materialize.js"></script>
+    <script src="{{rootURL}}assets/other/test.js"></script>
     {{content-for "body-footer"}}
+    <script src="{{rootURL}}assets/other/canvas.js"></script>
   </body>
 </html>
