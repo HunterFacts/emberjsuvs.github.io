@@ -1,7 +1,7 @@
 export default function() {
   this.namespace = '/api';
 
-  this.get('/subscription', function() {
+/*  this.get('/subscriptions', function() {
     return {
       data: [{
         type: 'paper',
@@ -41,5 +41,5 @@ export default function() {
         }
       }]
     };
-  });
+  });*/
 }
